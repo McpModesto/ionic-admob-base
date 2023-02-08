@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
+import { AdMob } from '@capacitor-community/admob';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+
   public appPages = [
-    { title: 'Inbox', url: '/folder/Inbox', icon: 'mail' },
+    { title: 'Home', url: '/home', icon: 'home' },
     { title: 'Outbox', url: '/folder/Outbox', icon: 'paper-plane' },
     { title: 'Favorites', url: '/folder/Favorites', icon: 'heart' },
     { title: 'Archived', url: '/folder/Archived', icon: 'archive' },
@@ -14,5 +17,12 @@ export class AppComponent {
     { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
-  constructor() {}
+  
+  constructor() {
+    AdMob.initialize({
+      requestTrackingAuthorization: false,
+      testingDevices: [''],
+      initializeForTesting: false,
+    });
+  }
 }
