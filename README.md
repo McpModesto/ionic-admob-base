@@ -1,6 +1,7 @@
 # Aplicación base de Ionic (con sidemenu) haciendo uso de Admob
 
 Es una aplicación vacía de Ionic (sidemenu) con Admob ya configurado para directamente configurar id de aplicación e id de anuncios.
+Debes pulsar Home en el menú lateral y accedes al componente donde se muestra el BANNER y puedes ejecutar un INTERSTITIAL.
 
 #### Google tiene sus propios IDs de anuncios de prueba, son los que uso en este proyecto:
 https://developers.google.com/admob/android/test-ads
